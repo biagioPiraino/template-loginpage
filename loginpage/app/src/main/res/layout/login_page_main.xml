@@ -8,48 +8,67 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
-    <ImageView
-        android:id="@+id/login_page_animation"
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/username_input_layout"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:contentDescription="Login page animation"
-        tools:src="@tools:sample/avatars"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:hint="@string/login_page_username"
+        app:startIconDrawable="@drawable/ic_user"
+        app:helperText="Required *"
+        app:helperTextTextColor="@color/red_default"
+        app:counterEnabled="true"
+        app:counterMaxLength="25"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <EditText
-        android:id="@+id/login_page_username"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:hint="Username"
-        android:inputType="text"
-        android:layout_marginTop="30sp"
-        app:layout_constraintTop_toBottomOf="@id/login_page_animation"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/username_input_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLength="25"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/login_page_password"
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/password_input_layout"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:layout_marginTop="15sp"
-        app:layout_constraintTop_toBottomOf="@id/login_page_username"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:hint="@string/login_page_password"
+        app:counterEnabled="true"
+        app:counterMaxLength="25"
+        app:helperText="Required *"
+        app:helperTextTextColor="@color/red_default"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username_input_layout"
+        app:startIconDrawable="@drawable/ic_password">
 
-    <Button
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password_input_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:maxLength="25"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_page_signin_button"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
         android:text="Sign in"
-        android:textAllCaps="false"
-        android:textSize="19sp"
-        android:layout_marginTop="15sp"
-        app:layout_constraintTop_toBottomOf="@id/login_page_password"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_input_layout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

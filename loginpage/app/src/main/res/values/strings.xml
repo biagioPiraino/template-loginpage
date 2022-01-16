@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">loginpage</string>
+    <string name="login_page_username">Username</string>
+    <string name="login_page_password">Password</string>
 </resources>

@@ -8,6 +8,16 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
+    <RelativeLayout
+        android:id="@+id/login_page_image"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:id="@+id/login_page_username_input_layout"
@@ -18,13 +28,9 @@
         android:layout_marginEnd="32dp"
         android:hint="@string/login_page_username"
         app:startIconDrawable="@drawable/ic_user"
-        app:helperText="Required *"
-        app:helperTextTextColor="@android:color/holo_red_dark"
-        app:counterEnabled="true"
-        app:counterMaxLength="25"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/login_page_image">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/login_page_username_input_edit_text"
@@ -42,10 +48,8 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:hint="@string/login_page_password"
-        app:counterEnabled="true"
-        app:counterMaxLength="25"
-        app:helperText="Required *"
-        app:helperTextTextColor="@android:color/holo_red_dark"
+        app:helperText="Forgot Password?"
+        app:helperTextTextColor="@android:color/darker_gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_page_username_input_layout"
@@ -76,9 +80,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_page_signin_button">
@@ -91,8 +95,8 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:background="@android:color/white"
-            android:text=" or "
-            android:textColor="@android:color/darker_gray" />
+            android:text="OR"
+            android:textColor="@android:color/darker_gray"/>
 
         <View
             android:layout_width="match_parent"
@@ -115,11 +119,36 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:text="@string/google_sign_in"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_page_divider" />
+
+    <RelativeLayout
+        android:id="@+id/login_page_register_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_page_google_sing_in">
+
+        <TextView
+            android:id="@+id/login_page_new_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/white"
+            android:text="New to App? Register"
+            android:textColor="@android:color/darker_gray"/>
+
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,4 +2,10 @@
     <string name="app_name">loginpage</string>
     <string name="login_page_username">Username</string>
     <string name="login_page_password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="login">Login</string>
+    <string name="or">OR</string>
+    <string name="login_with_google">Login with Google</string>
+    <string name="new_to_app">New to App?</string>
+    <string name="register">Register</string>
 </resources>
